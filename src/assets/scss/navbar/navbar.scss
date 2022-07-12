@@ -1,0 +1,41 @@
+@import "./logovans";
+@import "./cartwidget";
+
+@mixin flexDs ($ds, $fd, $jc) {
+    display: $ds;
+    flex-direction: $fd;
+    justify-content: $jc;
+}
+
+div {
+    @include flexDs(flex, column, center);
+    
+    .navbar {
+        @include flexDs(flex, row, space-between);
+
+        .widgets {   
+            @include flexDs(flex, row, flex-end);
+
+            > * {
+                margin: 1rem;
+            }
+        }
+    }
+
+    .navegation {
+        @include flexDs(flex, row, center);
+        font-family: Roboto;
+        font-size: 0.7rem;
+        background: #000;
+
+        > * {
+            color: #fff;
+            text-decoration: none;
+            margin: 5px;
+        }
+
+        > *:hover {
+            color: rgb(218, 32, 32);
+        }
+    }
+}
