@@ -27,7 +27,7 @@ The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
 ## `Demo.`
-Si deseas visitar esta pagina puedes hacerlo mediante este enlace: [Project demo](https://joseottonello.github.io/app-ecommerce//)
+Si deseas visitar esta pagina puedes hacerlo mediante este enlace: [Project demo](https://joseottonello.github.io/37070-Clase12Ottonello//)
 
 ## `Preview.`
 ![](./src/assets/images/gif.gif)
