@@ -1,0 +1,42 @@
+.logo {
+  margin: 0.5rem;
+  width: 100px;
+  height: 50px;
+}
+
+.link {
+  color: #000;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.navbar .navegation {
+  font-size: 1rem;
+  padding: 1rem;
+  text-decoration: none;
+}
+
+.Item-Button {
+  text-decoration: none;
+}
+
+.containerList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 250px);
+  grid-auto-rows: minmax(250px, auto);
+  grid-auto-flow: dense;
+  gap: 1rem;
+  padding: 1rem;
+}/*# sourceMappingURL=itemList.css.map */

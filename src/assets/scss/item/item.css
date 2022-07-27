@@ -1,0 +1,49 @@
+.logo {
+  margin: 0.5rem;
+  width: 100px;
+  height: 50px;
+}
+
+.link {
+  color: #000;
+  text-decoration: none;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+div .navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+div .navbar .widgets {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+div .navbar .widgets > * {
+  margin: 1rem;
+}
+div .navegation {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-family: Roboto;
+  font-size: 0.7rem;
+  background: #000;
+}
+div .navegation > * {
+  color: #fff;
+  text-decoration: none;
+  margin: 5px;
+}
+div .navegation > *:hover {
+  color: rgb(218, 32, 32);
+}
+
+.Item-Button {
+  text-decoration: none;
+}/*# sourceMappingURL=item.css.map */

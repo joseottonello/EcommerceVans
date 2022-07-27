@@ -1,8 +1,10 @@
 import Swal from 'sweetalert2';
+import { Link } from "react-router-dom";
 import { useContext } from "react";
-import Button from '@mui/material/Button';
+import { Card, Button, Alert } from '@mui/material';
 import cartContext from "../../context/CartContext";
 import { createBuyOrder } from "../../service/firestore";
+import "../../assets/scss/cart/cart.scss";
 
 const Cart = () => {
     const {cart, removeToCart, totalCart, clearCart} = useContext(cartContext);
@@ -12,7 +14,7 @@ const Cart = () => {
             buyer: {
                 name: "José Ottonello",
                 phone: "123123121235",
-                email: "dev.ottonellojose@gmail.com"
+                email: "ottonellojose@gmail.com"
             },
             items: cart,
             total: totalCart()
@@ -35,30 +37,41 @@ const Cart = () => {
                     timer: 1500
                   })
             })
-    }
+        }
 
     return (
-        <>
-            {
-            cart.map((item) => 
-                <div key={item.id}>
+        <div className="Cart-Container">
+            { cart.map((item) => 
+                <Card key={item.id} className="Cart-Products">
                     <div>
-                        <img src={item.image} alt="" width="100" />
+                        <img className="Cart-IMG" src={item.image} alt={item.name}/>
                     </div>
-                    <div>
-                        <p> {item.name} </p>
-                        <p> ${item.price} </p>
-                        <p> {item.detail} </p>
-                        <p> Productos seleccionados: {item.cantidad} </p>
-                        <p> subtotal: ${item.price * item.cantidad} </p>
+                    <div className="Cart-Content">
+                        <h1> {item.name} </h1>
+                        <h4> ${item.price} </h4>
+                        <h3> subtotal: ${item.price * item.cantidad} </h3>
+                        <h3> Productos seleccionados: {item.cantidad} </h3>
                     </div>
-                    <Button variant="contained" color="error" onClick={() => removeToCart(item.id)} >eliminar producto</Button>
-                </div>)
+                    <div className="Cart-Action">
+                        <Link to="/"><Button className="Cart-Button" variant="contained" color="info">Volver al Inicio</Button></Link>
+                        <Button className="Cart-Button" variant="contained" color="error" onClick={() => removeToCart(item.id)} >eliminar producto</Button>
+                    </div>
+
+                </Card>)
             }
-            <span>Total a pagar: ${Number(totalCart().toFixed(2))}</span>
-            <Button variant="cowntained" color="primary" onClick={handleBuyOrderInCart}>Realizar compra</Button>
-            <Button variant="contained" color="error" onClick={clearCart}>vaciar carrito</Button>
-        </>
+            {
+                totalCart() === 0
+                ? <div className="Cart-Finish">
+                    <Alert variant="filled" severity="info">¡Parece que no hay nada en el Carrito!</Alert>
+                    <Link to="/"><Button variant="contained">Volver al inicio</Button></Link>
+                  </div>
+                : <div className="Cart-Finish">
+                    <h3>Total a pagar: ${Number(totalCart().toFixed(2))}</h3>
+                    <Button variant="contained" color="info" onClick={handleBuyOrderInCart}>Realizar compra</Button>
+                    <Button variant="contained" color="error" onClick={clearCart}>vaciar carrito</Button>
+                 </div>
+            }
+        </div>
     )
 }
 

@@ -1,25 +1,20 @@
 @import "../navbar/navbar.scss";
 
-.container {
-        @include flexDs(flex, row, center);
-
-        .cardDetail {
-                @include flexDs(flex, row, center);
-
-                margin: 1rem;
-                padding: 1rem;
-                
-                .imgContext {
-                        .img {
-                                @include flexDs(flex, row, flex-start);
-                                
-                                width: 25rem;
-                                height: 25rem;
-                        }
-                }
-                
-                .content {
-                        @include flexDs(flex, column, flex-start)
-                }
+.Detail-Container {
+    @include flexDs(flex, row, center, center);
+    
+    .Detail-Card {
+        display: grid;
+        grid-template-columns: 30rem 20rem;
+        
+        margin: 1rem;
+        
+        .Detail-Paper {
+            @include flexDs(flex, row, center, center);
         }
+        
+        .Detail-Content {
+            @include flexDs(flex, column, center, center);
+        }
+    }
 }

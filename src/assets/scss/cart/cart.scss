@@ -1,0 +1,47 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+@mixin dsFx ($fx, $fd, $ai, $jc) {
+    display: $fx;
+    flex-direction: $fd;
+    align-items: $ai;
+    justify-content: $jc;
+}
+
+.Cart-Container {
+    display: grid;
+    grid-template-columns: (auto-fill, 250px);
+    grid-auto-rows: minmax(300px, auto);
+    grid-auto-flow: dense;
+    
+    gap: 1rem;
+    margin: 1rem;
+    padding: 1rem;
+    
+    
+    .Cart-Products {
+        @include dsFx(flex, row, flex-start, center);
+        
+        .Cart-Content {
+            @include dsFx(flex, column, flex-start, center);
+            margin: 1rem;
+            
+            .Cart-Button {
+                margin: 0.5rem;
+            }
+        }
+        
+        .Cart-Action {
+            @include dsFx(flex, column, center, center);
+
+        }
+    }
+
+    .Cart-Finish {
+        @include dsFx(flex, column, center, center);
+        gap: 1rem;
+    }
+}
+

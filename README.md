@@ -4,7 +4,7 @@
 Este proyecto se centra en realizar una replica de la tienda Oficial de Vans, con modificaciones a gusto pero con la misma finalidad, llevar a cabo una compra (en esta replica, ficticia) desde la pagina.
 
 ## `Estado.`
-El proyecto se encuentra en estado de desarrollo y corrección.
+El proyecto se encuentra en estado de corrección.
 
 ## `Caracteristicas.`
 
@@ -25,6 +25,12 @@ Este comando correra la aplicacion en modo desarrollador, es decir en un directo
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+
+## `Demo.`
+Si deseas visitar esta pagina puedes hacerlo mediante este enlace: [Project demo](https://joseottonello.github.io/app-ecommerce//)
+
+## `Preview.`
+![](./src/assets/images/gif.gif)
 
 ### Dependencias.
 

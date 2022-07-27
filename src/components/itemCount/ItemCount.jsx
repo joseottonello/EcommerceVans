@@ -1,13 +1,10 @@
 import { useState } from "react";
-import ButtonGroup from '@mui/material/ButtonGroup';
-import Button from '@mui/material/Button';
-import Badge from '@mui/material/Badge';
-import IconButton from '@mui/material/IconButton';
+import { ButtonGroup, IconButton, Button, Badge } from '@mui/material';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
-import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
-const ItemCount = ({ initial, stock, onAdd }) => {
+const ItemCount = ({ initial, stock, onAddCart }) => {
     const [count, setCount] = useState(initial)
 
     const suma = () => count !== stock && setCount(count + 1)
@@ -17,7 +14,7 @@ const ItemCount = ({ initial, stock, onAdd }) => {
         <ButtonGroup sx={{display: "flex", flexDirection: "row"}}>
             <IconButton color="error" aria-label="increase" size="large" onClick={suma}><AddCircleIcon/></IconButton>
             <Badge color="error" badgeContent={count}>
-                <Button color="error" size="large" onClick={()=>onAdd(count)}><ShoppingBagIcon/></Button>
+                <Button color="error" size="large" onClick={()=>onAddCart(count)}><AddShoppingCartIcon/></Button>
             </Badge>
             <IconButton color="error" aria-label="decrease" size="large" onClick={resta}><RemoveCircleIcon/></IconButton>
         </ButtonGroup>

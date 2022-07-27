@@ -9,9 +9,11 @@ const CartWidget = () => {
     const { quantInCart } = useContext(cartContext);
 
     return (
+        <>
         <Badge badgeContent={quantInCart()} color="error">
             <Link to="/cart" className="link"><ShoppingCartCheckoutIcon/></Link>
         </Badge>
+        </>
     )
 }
 

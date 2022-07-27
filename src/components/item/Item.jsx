@@ -1,14 +1,9 @@
 import { Link } from "react-router-dom";
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import CardActions from '@mui/material/CardActions';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import { CardContent, CardActions, CardMedia, Card, Button, Typography } from '@mui/material';
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import "../../assets/scss/item/item.scss";
 
 const Item = ({props}) => {
-
     const URLDetail = `/item/${props.id}`;
 
     return (
@@ -21,10 +16,14 @@ const Item = ({props}) => {
                 <Typography variant="body2" color="text.secondary">{props.description}</Typography>
             </CardContent>
             <CardActions>
-                <Link to={URLDetail} className="button"><Button variant="contained" color="error">Detail</Button></Link>
+                <Link to={URLDetail} className="Item-Button">
+                    <Button variant="contained" color="error">
+                        <ShoppingBagIcon/>
+                    </Button>
+                </Link>
             </CardActions>
         </Card>
-  )
+    )
 }
 
 export default Item
