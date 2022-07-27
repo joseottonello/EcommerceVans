@@ -23,9 +23,6 @@ Una vez descargado/clonado este repositorio, para su ejecución es necesario dir
 Este comando correra la aplicacion en modo desarrollador, es decir en un directorio local.
 [http://localhost:3000](http://localhost:3000) en tu navegador
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
 ## `Demo.`
 Si deseas visitar esta pagina puedes hacerlo mediante este enlace: [Project demo](https://joseottonello.github.io/37070-Clase12Ottonello//)
 
