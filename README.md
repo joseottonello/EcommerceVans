@@ -25,7 +25,7 @@ Este comando correra la aplicacion en modo desarrollador, es decir en un directo
 [http://localhost:3000](http://localhost:3000) en tu navegador
 
 ## `Demo.`
-Si deseas visitar esta pagina puedes hacerlo mediante este enlace: [Project demo](https://joseottonello.github.io/37070-Clase12Ottonello//)
+Si deseas visitar esta pagina puedes hacerlo mediante este enlace: [Project demo](https://ecommerce-vans-joseottonello.vercel.app/)
 
 ## `Preview.`
 ![](./src/assets/images/Home.png)
