@@ -1,16 +1,17 @@
 ## `ECOMMERCE VANS`
 
 ## `Descripción.`
-Este proyecto se centra en realizar una replica de la tienda Oficial de Vans, con modificaciones a gusto pero con la misma finalidad, llevar a cabo una compra (en esta replica, ficticia) desde la pagina.
+Este proyecto se centra en realizar una replica de la tienda Oficial de Vans, con modificaciones a gusto pero con la misma finalidad, navegar entre sus productos, tener la posibilidad de ver mas detalle sobre el producto que el usuario seleccione y llevar a cabo una compra, todos los pasos desde la pagina.
 
 ## `Estado.`
-El proyecto se encuentra en estado de corrección.
+El proyecto se encuentra en estado de finalización.
 
 ## `Caracteristicas.`
 
-Este Proyecto esta creado con React, libreria basada en JavaScript la cual nos permite el uso de componentes y la reulitizacion de los mismos mediante la creacion de etiquetas como uno de sus tantos beneficios.
-Entre las funcionalidades de esta libreria destaco la utilizacion de "Hooks" los cuales nos permiten el manejo de estados, como lo es "useState", alojar contenido de gran tamaño y este ejecutarlo una unica vez, como lo es el caso de "useEffect" así como tambien dando paso al resto del contenido dejando que este se ejecute sin colisionar con el resto, dando una mejor experiencia de usuario.
+Este Proyecto esta creado con React, entre las funcionalidades de esta libreria destaco la utilizacion de "Hooks" los cuales nos permiten el manejo de estados, como lo es "useState", alojar contenido de gran tamaño y este ejecutarlo una unica vez, como lo es el caso de "useEffect" así como tambien dando paso al resto del contenido dejando que este se ejecute sin colisionar con el resto, dando una mejor experiencia de usuario.
 Tambien, el manejo de rutas evitando recargar la pagina y todo su contenido nuevamente, como lo es "React Router".
+Para la estilizacion de la misma usé librerias como Material UI y Styled Components aun que tambien en casos excepcionales
+utilicé CSS.
 
 ## `Instalación.`
 
@@ -27,7 +28,9 @@ Este comando correra la aplicacion en modo desarrollador, es decir en un directo
 Si deseas visitar esta pagina puedes hacerlo mediante este enlace: [Project demo](https://joseottonello.github.io/37070-Clase12Ottonello//)
 
 ## `Preview.`
-![](./src/assets/images/gif.gif)
+![](./src/assets/images/Home.png)
+![](./src/assets/images/Detail.png)
+![](./src/assets/images/Cart.png)
 
 ### Dependencias.
 
@@ -42,4 +45,8 @@ Dentro del proyecto se encuentra un archivo llamado "package.json" en el cual se
 [NPM](https://www.npmjs.com/).
 
 [React Router](https://reactrouter.com/).
+
+[Material UI](https://mui.com/).
+
+[Styled Components](https://styled-components.com/).
 

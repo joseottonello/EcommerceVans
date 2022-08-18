@@ -1,20 +1,29 @@
+import { React, useEffect } from 'react';
 import { NavLink } from "react-router-dom";
 import CartWidget from "./CartWidget";
 import LogoVans from "./LogoVans";
-import { Card } from '@mui/material';
-import "../../assets/scss/navbar/navbar.scss";
+import styles from './navbar.module.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const NavBar = () => {
+    useEffect(() => {
+        AOS.init()
+    }, [])    
+
     return (
-        <Card className="navbar">
-            <LogoVans className="logo" />
-            <div className="navegation">
-                <NavLink className="classics" to="/category/classics">Classics |</NavLink>
-                <NavLink className="skate" to="/category/skate"> Skate |</NavLink>
-                <NavLink className="surf" to="/category/surf"> Surf</NavLink>
+        <div 
+        className={styles.container}
+        data-aos="fade-up"
+        data-aos-duration="1200">
+            <LogoVans/>
+            <div className={styles.section}>
+                <NavLink className={styles.li} to="/category/classics">Classics</NavLink>
+                <NavLink className={styles.li} to="/category/skate">Skate</NavLink>
+                <NavLink className={styles.li} to="/category/surf">Surf</NavLink>
             </div>
-            <CartWidget className="cart"/>
-        </Card>
+            <CartWidget/>
+        </div>
     )
 }
 

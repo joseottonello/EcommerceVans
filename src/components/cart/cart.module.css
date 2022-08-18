@@ -1,0 +1,82 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.tarjetas {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 1rem;
+}
+
+img {
+    width: 150px;
+}
+
+.text {
+    font-size: 1rem;
+    font-family: arial;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 30rem;
+    margin: 1rem;
+    gap: 1rem;
+}
+
+h1 {
+    font-family: 'Boogaloo', cursive;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    gap: 1rem;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.total {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-family: 'Boogaloo', cursive;
+    margin: 1rem;
+    margin-top: 7rem;
+    padding: 2rem;
+}
+
+.totalButtons {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.vacio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10rem;
+    margin-right: 20rem;
+    gap: 2rem;
+}

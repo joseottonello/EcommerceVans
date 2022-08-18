@@ -28,7 +28,7 @@ const ItemListContainer = () => {
     }, [category]);
 
     return (
-        <ItemList props={products} />
+        <ItemList props={products}/>
     )
 }
 

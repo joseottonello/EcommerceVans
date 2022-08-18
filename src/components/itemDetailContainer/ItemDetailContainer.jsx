@@ -2,6 +2,13 @@ import { useState, useEffect } from "react";
 import ItemDetail from "../itemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 import { getProductsById } from "../../service/firestore";
+import styled from 'styled-components';
+
+const Container = styled.div`
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+`
 
 const ItemDetailContainer = () => {  
 
@@ -16,7 +23,9 @@ const ItemDetailContainer = () => {
     }, [id]);
 
     return (
-        <ItemDetail props={detail}/>
+        <Container>
+            <ItemDetail props={detail}/>
+        </Container>
     )
 }
 

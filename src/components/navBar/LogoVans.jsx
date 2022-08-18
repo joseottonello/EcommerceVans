@@ -1,10 +1,16 @@
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/images/logo.jpg";
-import "../../assets/scss//navbar/_logovans.scss";
+import styled from 'styled-components';
+
+const Img = styled.img`
+    width: 150px;
+`
 
 const LogoVans = () => {
     return (
-        <NavLink to="/"><img className="logo" src={logo} alt="Vans Store" /></NavLink>
+        <NavLink to="/">
+            <Img src={logo} alt="Vans Store" />
+        </NavLink>
     )
 }
 
