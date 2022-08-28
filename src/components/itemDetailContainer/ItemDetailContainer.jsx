@@ -1,14 +1,10 @@
 import { useState, useEffect } from "react";
-import ItemDetail from "../itemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 import { getProductsById } from "../../service/firestore";
-import styled from 'styled-components';
-
-const Container = styled.div`
-    display: flex;
-    justify-content: center;
-    margin: 2rem;
-`
+import { lazy, Suspense } from 'react';
+import BeatLoader from 'react-spinners/BeatLoader';
+import '../../sass/detail.scss';
+const ItemDetail = lazy(() => import('../itemDetail/ItemDetail'));
 
 const ItemDetailContainer = () => {  
 
@@ -23,9 +19,20 @@ const ItemDetailContainer = () => {
     }, [id]);
 
     return (
-        <Container>
-            <ItemDetail props={detail}/>
-        </Container>
+        <Suspense fallback={
+            <BeatLoader
+                size={5}
+                color="#c21010"
+                cssOverride={{
+                display: 'flex',
+                justifyContent: 'center',
+                margin: '15rem'
+            }}
+            />}>
+                <div className="itemDetail-container">
+                    <ItemDetail props={detail}/>
+                </div>
+        </Suspense>
     )
 }
 

@@ -1,9 +1,7 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 import ItemCount from "../itemCount/ItemCount";
-import { Typography, CardContent, CardActions, Card, Paper, Button } from '@mui/material';
-import styles from './detail.module.css';
+import '../../sass/detail.scss';
 
 const ItemDetail = ({ props }) => {
     const {addToCart} = useContext(CartContext);
@@ -17,22 +15,24 @@ const ItemDetail = ({ props }) => {
     }
 
     return (
-        <Card 
-        className={styles.container}>
-            <Paper>
-                <img className={styles.imgDetail} src={props.image} alt={props.name}/>
-            </Paper>
-            <CardContent>
-                <Typography gutterBottom variant="h4" component="div">{props.name}</Typography>
-                <Typography gutterBottom variant="h4" component="div">${props.price}</Typography>
-                <Typography gutterBottom variant="h6" component="div">{props.gender}</Typography>
-                <Typography gutterBottom variant="h6" component="div">{props.descriptionDetail}</Typography>
-                <CardActions className={styles.actions}>
-                    <ItemCount initial={0} stock={props.stock} onAddCart={onAddCart}/>
-                    <Link className={styles.link} to="/cart"><Button variant="contained" color="error">Ir al Carrito</Button></Link> 
-                </CardActions>
-            </CardContent>
-        </Card>
+        <div 
+        data-aos="fade-up"
+        data-aos-duration="2000"
+        className="detail-container">
+            <img 
+            alt={props.name}
+            src={props.image} 
+            className="detail-container-image"/>
+            <section className="detail-container-text">
+                <h1>{props.name}</h1>
+                <p>${props.price}</p>
+                <p>{props.gender}</p>
+                <p>{props.descriptionDetail}</p>
+                <section className="detail-container-action">
+                    <ItemCount initial={0} stock={props.stock} onAddCart={onAddCart}/> 
+                </section>
+            </section>
+        </div>
     )
 }
 

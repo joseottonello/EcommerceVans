@@ -1,0 +1,32 @@
+@import 'mixins';
+@import 'fonts';
+
+.navbar-container {
+    @include displayFlex(row, space-between, center);
+    margin: 0 0 1rem 0;
+    padding: 0 1rem 0 1rem;
+    box-shadow: 0 1px 5px 0 #000;
+
+    .navbar-container-image {
+        width: 8rem;
+
+        @media screen and (max-width: 575px) {
+            width: 6rem;
+        }
+    }
+
+    .navbar-container-links {
+        > * {
+            margin: 1rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            font-family: $link;
+            transition: all 0.5s ease;
+        }
+
+        > *:hover {
+            color: #ff0000;
+            font-size: 1.3rem;
+        }
+    }
+}
