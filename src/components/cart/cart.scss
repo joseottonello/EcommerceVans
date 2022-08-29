@@ -37,9 +37,13 @@
         @include displayFlex (column, center, center);
         
         .cart-total-alert {
+            margin-right: 12rem;
             gap: 1rem;
             @include displayFlex (column, center, center);
-
+            
+            @media screen and (max-width: 575px) {
+                margin-right: 0;
+            }
         }
 
         .cart-total-finalizar {
