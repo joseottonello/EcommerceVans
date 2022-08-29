@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
-import { CartContext } from "../../context/CartContext";
-import ItemCount from "../itemCount/ItemCount";
-import '../../sass/detail.scss';
+import { CartContext } from "../../../context/CartContext";
+import ItemCount from "../../itemCount/ItemCount";
+import './itemdetail.scss';
 
 const ItemDetail = ({ props }) => {
     const {addToCart} = useContext(CartContext);
@@ -16,19 +16,16 @@ const ItemDetail = ({ props }) => {
 
     return (
         <div 
-        data-aos="fade-up"
-        data-aos-duration="2000"
-        className="detail-container">
+        className="itemdetail-container">
             <img 
             alt={props.name}
             src={props.image} 
-            className="detail-container-image"/>
-            <section className="detail-container-text">
+            className="itemdetail-image"/>
+            <section className="itemdetail-text">
                 <h1>{props.name}</h1>
-                <p>${props.price}</p>
-                <p>{props.gender}</p>
+                <p>${props.price} {props.gender}</p>
                 <p>{props.descriptionDetail}</p>
-                <section className="detail-container-action">
+                <section className="itemdetail-action">
                     <ItemCount initial={0} stock={props.stock} onAddCart={onAddCart}/> 
                 </section>
             </section>

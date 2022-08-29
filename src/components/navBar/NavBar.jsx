@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import CartWidget from "./CartWidget";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import '../../sass/navbar.scss';
+import './navbar.scss';
 
 const NavBar = () => {
     useEffect(() => {
@@ -11,10 +11,10 @@ const NavBar = () => {
     }, [])    
 
     return (
-        <div 
-        className="navbar-container"
+        <div
         data-aos="fade-up"
-        data-aos-duration="2000">
+        data-aos-duration="2000"
+        className="navbar-container">
             <section>
                 <NavLink to="/">
                     <img 

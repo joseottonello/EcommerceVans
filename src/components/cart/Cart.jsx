@@ -7,7 +7,7 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import cartContext from "../../context/CartContext";
 import { createBuyOrder } from "../../service/firestore";
-import '../../sass/cart.scss';
+import './cart.scss';
 
 const Cart = () => {
     const {cart, removeToCart, totalCart, clearCart} = useContext(cartContext);

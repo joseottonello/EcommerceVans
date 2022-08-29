@@ -1,5 +1,5 @@
-@import 'mixins';
-@import 'fonts';
+@import '../../sass/mixins';
+@import '../../sass/fonts';
 
 .navbar-container {
     @include displayFlex(row, space-between, center);

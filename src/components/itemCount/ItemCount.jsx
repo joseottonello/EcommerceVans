@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ButtonGroup, IconButton, Button, Fab } from '@mui/material';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
+import './itemcount.scss';
 
 const ItemCount = ({ initial, stock, onAddCart }) => {
     const [count, setCount] = useState(initial)

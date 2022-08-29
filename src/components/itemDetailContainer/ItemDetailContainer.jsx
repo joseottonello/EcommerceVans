@@ -3,8 +3,8 @@ import { useParams } from "react-router-dom";
 import { getProductsById } from "../../service/firestore";
 import { lazy, Suspense } from 'react';
 import BeatLoader from 'react-spinners/BeatLoader';
-import '../../sass/detail.scss';
-const ItemDetail = lazy(() => import('../itemDetail/ItemDetail'));
+import './itemdetailcontainer.scss';
+const ItemDetail = lazy(() => import('./itemDetail/ItemDetail'));
 
 const ItemDetailContainer = () => {  
 
@@ -29,7 +29,7 @@ const ItemDetailContainer = () => {
                 margin: '15rem'
             }}
             />}>
-                <div className="itemDetail-container">
+                <div className="itemdetailcontainer">
                     <ItemDetail props={detail}/>
                 </div>
         </Suspense>

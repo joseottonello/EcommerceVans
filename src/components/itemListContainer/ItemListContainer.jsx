@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import ItemList from "../itemList/ItemList";
+import ItemList from "./itemList/ItemList";
 import {useParams} from 'react-router-dom';
 import { getProducts, getProductsByCategory } from "../../service/firestore";
+import './itemlistcontainer.scss';
 
 const ItemListContainer = () => {  
 
@@ -28,7 +29,9 @@ const ItemListContainer = () => {
     }, [category]);
 
     return (
-        <ItemList props={products}/>
+        <div className="itemlistcontainer">
+            <ItemList props={products}/>
+        </div>
     )
 }
 

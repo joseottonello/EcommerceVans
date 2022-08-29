@@ -12,17 +12,8 @@ const App = () => {
     return (
             <CartProvider>
                 <BrowserRouter>
-                    <Suspense fallback={
-                    <BeatLoader
-                        size={5}
-                        color="#c21010"
-                        cssOverride={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        margin: '15rem'
-                    }}
-                    />}>
-                        <NavBar />
+                    <Suspense fallback={<BeatLoader size={8} color="#c21010" cssOverride={{ display: 'flex', justifyContent: 'center', margin: '15rem' }}/>}>
+                        <NavBar/>
                         <Routes>
                             <Route path="/" element={<ItemListContainer/>}/>
                             <Route path="/category/:category" element={<ItemListContainer/>}/>

@@ -1,0 +1,5 @@
+@import '../../sass/mixins';
+
+.itemdetailcontainer {
+    @include displayFlex (row, center, center);
+}
