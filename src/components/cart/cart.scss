@@ -6,6 +6,10 @@
 
     .cart-products {
         @include displayFlex (column, center, center);
+        
+        .cart-product {
+            @include displayFlex (row, center, center);
+        }
     }
     
     .cart-total {

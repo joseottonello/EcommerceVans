@@ -5,4 +5,8 @@
     grid-auto-flow: dense;
     grid-auto-rows: minmax(200px, auto);
     grid-template-columns: repeat(auto-fill, max(20rem));
+
+    @media screen and (max-width: 575px) {
+        margin-left: 2rem;
+    }
 }
