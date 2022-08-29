@@ -1,0 +1,14 @@
+@import '../../sass/mixins';
+
+.cart-container {
+    margin: 1rem;
+    @include displayFlex (row, space-between, flex-start);
+
+    .cart-products {
+        @include displayFlex (column, center, center);
+    }
+    
+    .cart-total {
+        @include displayFlex (column, center, center);
+    }
+}
