@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { Button, Alert } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import cartContext from "../../context/CartContext";
 import { createBuyOrder } from "../../service/firestore";
@@ -61,7 +60,6 @@ const Cart = () => {
                                 <p> Valor total: ${item.price * item.cantidad} </p>
                             </article>
                             <article className="cart-action">
-                                <Link  to="/"><Button  variant="outlined" color="error" startIcon={<ArrowBackIosIcon />}>Inicio</Button></Link>
                                 <Button  variant="contained" color="error" onClick={() => removeToCart(item.id)} startIcon={<DeleteIcon />}>Eliminar</Button>
                             </article>
                         </div>)
@@ -77,8 +75,8 @@ const Cart = () => {
                         : <section className="cart-total-finalizar">
                             <h1>Total a pagar: ${Number(totalCart().toFixed(2))}</h1>
                             <div className="cart-total-finalizar-action">
-                                <Button variant="outlined" color="error" startIcon={<ShoppingBagIcon/>} onClick={handleBuyOrderInCart}>Realizar compra</Button>
                                 <Button variant="contained" color="error" startIcon={<DeleteIcon />} onClick={clearCart}>vaciar carrito</Button>
+                                <Button variant="outlined" color="error" startIcon={<ShoppingBagIcon/>} onClick={handleBuyOrderInCart}>Realizar compra</Button>
                             </div>
                         </section>
                 }
